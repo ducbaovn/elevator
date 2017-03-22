@@ -166,4 +166,4 @@ var STOP_TIMEOUT = 5000;
 
     return Elevator;
   }
-})()
+})();
