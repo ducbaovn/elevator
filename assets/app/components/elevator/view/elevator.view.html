@@ -1,0 +1,6 @@
+<div class="row">
+  <div ng-class="system.elevatorClass" ng-repeat="(j, elevator) in system.elevators.data">Elevator {{elevator.id}}</div>
+</div>
+<div class="row" ng-repeat="(i, floor) in system.floors.data">
+  <div ng-class="system.elevatorClass" ng-repeat="(j, elevator) in system.elevators.data">{{elevator.symbol(floor)}}</div>
+</div>

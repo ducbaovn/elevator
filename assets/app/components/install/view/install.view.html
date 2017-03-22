@@ -1,0 +1,22 @@
+<div class="container"><h2>Setup System</h2></div>
+<div class="container">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label>Number of floors</label>
+      <input type="number" id="numberFloor" placeholder="1" ng-model="totalFloor">
+    </div>
+    <div class="form-group">
+      <label>Number of elevators</label>
+      <select ng-options="i for i in elevatorsOption" ng-model="totalElevator"></select>
+    </div>
+    <div class="form-group">
+      <label>Elevators speed (second/floor)</label>
+      <input type="number" id="runSpeed" placeholder="1" ng-model="runSpeed">
+    </div>
+    <div class="form-group">
+      <label>Stop time (second)</label>
+      <input type="number" id="stopTime" placeholder="1" ng-model="stopTime">
+    </div>
+    <button type="submit" ng-class="buttonClass()" ng-click="init()" ui-sref="system">Submit</button>
+  </form>
+</div>

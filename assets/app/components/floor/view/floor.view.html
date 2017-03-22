@@ -1,0 +1,19 @@
+<div class="row borderSystem">
+  <div class="col-md-2">Level</div>
+  <div class="col-md-3">People</div>
+  <div class="col-md-4">Level wish to go to</div>
+  <div class="col-md-3">Book</div>
+</div>
+<div class="row borderSystem" ng-repeat="(i, floor) in system.floors.data">
+  <div class="col-md-2">{{floor.level}}</div>
+  <div class="col-md-3">
+    <input type="number" class="form-control" id="floorPeopleInput" placeholder="people" ng-model="floor.people">
+  </div>
+  <div class="col-md-4">
+    <select ng-change="changeDirection(floor)" ng-options="f.level for f in otherFloor(system.floors.data, floor)" ng-model="floor.toFloor">
+    </select>
+  </div>
+  <div class="col-md-3">
+    <button ng-class="floor.buttonCss" ng-click="floor.book(system.floors.total, system.elevators)">Book</button>
+  </div>
+</div>
