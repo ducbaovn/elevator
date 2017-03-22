@@ -43,12 +43,13 @@ module.exports.connections = {
       }
     }
   },
+
   prodMySqlServer: {
-    database: 'api',
-    user: 'root',
-    password: 'bodyguy',
+    database: 'use4478yxucqh8zt',
+    user: 'kcndesfzfecyu0az',
+    password: 'n1a0f2bqx6hdx4rb',
     options: {
-      host: 'localhost',
+      host: 'edo4plet5mhv93s3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
       dialect: 'mysql',
       port: 3306,
       pool: {

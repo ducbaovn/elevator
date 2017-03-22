@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bower": "^1.8.0",
     "coffee-script": "^1.12.4",
     "ejs": "2.3.4",
     "grunt": "1.0.1",
@@ -29,7 +30,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bash ./post_install.sh"
   },
   "main": "app.js",
   "repository": {
