@@ -1,7 +1,7 @@
-var RUN_TIMEOUT = 1000;
-var STOP_TIMEOUT = 5000;
 (function() {
   'use strict';
+  var RUN_TIMEOUT = 1000;
+  var STOP_TIMEOUT = 5000;
   angular.module('elevatorApp')
     .factory('Elevator', elevatorModel);
 

@@ -25,9 +25,9 @@ var cssFilesToInject = [
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
-  '/bower_components/angular/angular.js',
-  '/bower_components/jquery/dist/jquery.js',
-  '/bower_components/angular-ui-router/release/angular-ui-router.js',
+  '/bower_components/angular/angular.min.js',
+  '/bower_components/jquery/dist/jquery.min.js',
+  '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
