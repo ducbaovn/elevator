@@ -29,8 +29,8 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   localMySqlServer: {
-    database: 'test',
-    user: 'root',
+    database: 'elevator',
+    user: 'admin',
     password: 'bodyguy',
     options: {
       host: 'localhost',
