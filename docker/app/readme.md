@@ -1,0 +1,1 @@
+docker build --no-cache --build-arg GIT_BRANCH=master -t elevator:1.0 ./docker/app/

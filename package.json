@@ -30,7 +30,7 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "NODE_ENV=development node app.js",
+    "start": "NODE_ENV=production node app.js",
     "postinstall": "bash ./post_install.sh"
   },
   "main": "app.js",
