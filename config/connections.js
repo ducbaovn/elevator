@@ -33,7 +33,7 @@ module.exports.connections = {
     user: 'admin',
     password: 'bodyguy',
     options: {
-      host: 'localhost',
+      host: 'elevator_db',
       dialect: 'mysql',
       port: 3306,
       pool: {

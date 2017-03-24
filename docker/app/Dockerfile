@@ -19,6 +19,7 @@ RUN git checkout $GIT_BRANCH
 RUN git pull origin $GIT_BRANCH
 
 RUN npm install
+RUN chmod +x post_install.sh
 RUN ./post_install.sh
 
 CMD $ENV_RUN_CMD
