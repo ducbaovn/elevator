@@ -28,7 +28,7 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localMySqlServer: {
+  devMySqlServer: {
     database: 'elevator',
     user: 'admin',
     password: 'bodyguy',
