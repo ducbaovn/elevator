@@ -1,3 +1,10 @@
+/**
+ * @ngdoc service
+ * @name elevatorApp.service:elevatorLog
+ * @description
+ * This is a service to push log for tracking the movement of the elevators in backend data storage
+ *
+*/
 (function() {
   'use strict';
   var PUSH_LOG = "http://localhost:1337/v1/elevator/history";
@@ -7,6 +14,16 @@
   elevatorLog.$inject = ["$http"];
 
   function elevatorLog($http) {
+
+    /**
+     * @ngdoc method
+     * @name push
+     * @methodOf elevatorApp.service:elevatorLog
+     * @description
+     * This method is used for tracking the movement of the elevators in backend data storage
+     * @param {object} elevator elevator object
+     * @returns {httpPromise} resolve with fetched data, or fails with error description.
+    */
     var doRequest = function(elevator) {
       var queue = elevator.bookingQueue[0]
       var data = {

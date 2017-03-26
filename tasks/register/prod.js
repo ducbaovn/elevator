@@ -13,6 +13,8 @@
  */
 module.exports = function(grunt) {
   grunt.registerTask('prod', [
+    'ngdocs',
+    'apidoc',
     'compileAssets',
     'concat',
     'uglify',

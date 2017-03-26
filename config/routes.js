@@ -35,7 +35,7 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'post /v1/elevator/history': 'ElevatorController.history'
+  'post /api/v1/elevator/history': 'ElevatorController.history'
 
   /***************************************************************************
   *                                                                          *

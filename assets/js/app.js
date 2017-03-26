@@ -4,18 +4,29 @@
 
   routerApp.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/install');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
 
       // HOME STATES AND NESTED VIEWS ========================================
+      .state('home', {
+        url: '/home',
+        templateUrl: './app/components/home/view/home.view.html'
+      })
+
+      // DOCUMENT STATES AND NESTED VIEWS ========================================
+      .state('document', {
+        url: '/document',
+        templateUrl: './app/components/document/view/document.view.html'
+      })
+      // INSTALL STATES AND NESTED VIEWS ========================================
       .state('install', {
         url: '/install',
         templateUrl: './app/components/install/view/install.view.html',
         controller: 'installController'
       })
 
-      // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+      // SYSTEM PAGE AND MULTIPLE NAMED VIEWS =================================
       .state('system', {
         url: '/system',
         views: {

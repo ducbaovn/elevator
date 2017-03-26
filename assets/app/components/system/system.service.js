@@ -1,3 +1,11 @@
+/**
+ * @ngdoc service
+ * @name elevatorApp.service:systemService
+ *
+ * @description
+ * This is a service to init system.
+ *
+*/
 (function () {
   'use strict';
 
@@ -9,14 +17,38 @@
   function systemService(Floor, Elevator) {
     var totalFloor = 10;
     var totalElevator = 4;
+    var elevatorCapacity = 20;
     var runSpeed = 1000;
     var stopTime = 5000;
-    var setParams = function (floorNumber, elevatorNumber, speed, stop) {
+
+    /**
+     * @ngdoc method
+     * @name set
+     * @methodOf elevatorApp.service:systemService
+     * @description
+     * This method will set parameters for init system
+     * @param {integer} floorNumber total Floors
+     * @param {integer} elevatorNumber total Eloors
+     * @param {integer} capacity Elevator Capacity
+     * @param {integer} speed elevator speed (second per floor)
+     * @param {integer} stop how long elevator stop (in second)
+    */
+    var setParams = function (floorNumber, elevatorNumber, capacity, speed, stop) {
       totalFloor = floorNumber;
       totalElevator = elevatorNumber;
+      elevatorCapacity = capacity;
       runSpeed = speed * 1000;
       stopTime = stop * 1000;
     }
+
+    /**
+     * @ngdoc method
+     * @name init
+     * @methodOf elevatorApp.service:systemService
+     * @description
+     * This method will init elevator system (floor and elevator instances)
+     * @param {Object} system system object
+    */
     var init = function(system) {
       system.floors.total = totalFloor;
       for(var i = totalFloor; i > 0; i--) {
@@ -38,20 +70,13 @@
           system.elevatorClass = "col-md-2 borderSystem"
       }
       for(var i = 0; i < totalElevator; i++) {
-        system.elevators.data.push(new Elevator(i+1, runSpeed, stopTime, system.floors.data, 20))
+        system.elevators.data.push(new Elevator(i+1, runSpeed, stopTime, elevatorCapacity))
       }
     }
-    var getOtherFloor = function (floors, floor) {
-      return _.reject(floors, floor)
-    }
-    var getFloor = function (floors, floor) {
-      return _.filter(floors, floor)[0]
-    }
+
     return {
       init: init,
-      set: setParams,
-      getOtherFloor: getOtherFloor,
-      getFloor: getFloor
+      set: setParams
     }
   }
 })();
