@@ -19,8 +19,9 @@ module.exports = {
 
   models: {
     connection: 'prodMySqlServer'
-  }
+  },
 
+  hookTimeout: 60000
   /***************************************************************************
    * Set the port in the production environment to 80                        *
    ***************************************************************************/
