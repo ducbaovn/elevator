@@ -7,7 +7,7 @@
 */
 (function() {
   'use strict';
-  var PUSH_LOG = "http://localhost:1337/v1/elevator/history";
+  var PUSH_LOG = "http://localhost:1337/api/v1/elevator/history";
   angular.module('elevatorApp')
     .factory('elevatorLog', elevatorLog);
 
